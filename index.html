@@ -1,10 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Хедер -->
+      <header class="header">
+        <div class="header__wrapper">
+          <h1 class="header__logo">devfinder</h1>
+          <button type="button" class="header__switch" id="headerSwitch">
+            <span class="header__switch-text" id="themeLabel">DARK</span>
+            <svg class="header__icon--moon" width="20" height="20">
+              <use href="./assets/sprite.svg#icon-moon"></use>
+            </svg>
+            <svg class="header__icon--sun" width="20" height="20">
+              <use href="./assets/sprite.svg#icon-sun"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
 
-</body>
+      <!-- Поисковая -->
+      <div class="search">
+        <form class="search-form" action="#" method="GET">
+          <div class="search-form__wrapper">
+            <svg class="search-form__icon" width="25" height="24">
+              <use href="./assets/sprite.svg#icon-search"></use>
+            </svg>
+            <input
+              class="search-form__placeholder"
+              type="text"
+              placeholder="Search GitHub username..."
+            />
+            <button type="button" class="search-form__button">Search</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Карта пользователя -->
+      <div class="user-card">
+        <img
+          src="./assets/ProfilePicture.svg"
+          alt="Profile picture"
+          class="user-card__photo user-card__photo-shown"
+        />
+
+        <div class="user-card__content-wrapper">
+          <div class="user-card__header">
+            <img
+              src="./assets/ProfilePicture.svg"
+              alt="Profile picture"
+              class="user-card__photo user-card__photo-adaptive"
+            />
+            <div class="user-card__profile-info">
+              <h1 class="user-card__name">The Octocat</h1>
+              <a href="" class="user-card__link">@octocat</a>
+              <p class="user-card__date user-card__date-adaptive">Joined 25 Jan 2011</p>
+            </div>
+            <p class="user-card__date user-card__date-shown">Joined 25 Jan 2011</p>
+          </div>
+
+          <div class="user-card__bio">
+            <p>This profile has no bio</p>
+          </div>
+
+          <div class="user-card__statistic">
+            <ul class="user-card__statistic-list">
+              <li class="user-card__statistic-item">
+                <p class="user-card__statistic-label">Repos</p>
+                <h2 class="user-card__statistic-value">8</h2>
+              </li>
+              <li class="user-card__statistic-item">
+                <p class="user-card__statistic-label">Followers</p>
+                <h2 class="user-card__statistic-value">3938</h2>
+              </li>
+              <li class="user-card__statistic-item">
+                <p class="user-card__statistic-label">Following</p>
+                <h2 class="user-card__statistic-value">9</h2>
+              </li>
+            </ul>
+          </div>
+
+          <div class="user-card__info">
+            <ul class="user-card__social-list">
+              <li class="user-card__social-item">
+                <a href="#" class="user-card__social-link">
+                  <svg class="user-card__social-icon" width="14" height="20">
+                    <use href="./assets/sprite.svg#icon-location"></use>
+                  </svg>
+                  <span>San Francisco</span>
+                </a>
+              </li>
+              <li class="user-card__social-item">
+                <a href="#" class="user-card__social-link">
+                  <svg class="user-card__social-icon" width="20" height="17">
+                    <use href="./assets/sprite.svg#icon-twitter"></use>
+                  </svg>
+                  <span>Not Available</span>
+                </a>
+              </li>
+              <li class="user-card__social-item">
+                <a
+                  href="https://github.blog"
+                  class="user-card__social-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg class="user-card__social-icon" width="20" height="20">
+                    <use href="./assets/sprite.svg#icon-link"></use>
+                  </svg>
+                  <span>https://github.blog</span>
+                </a>
+              </li>
+              <li class="user-card__social-item">
+                <a
+                  href="https://github.com/github"
+                  class="user-card__social-link"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg class="user-card__social-icon" width="20" height="20">
+                    <use href="./assets/sprite.svg#icon-company"></use>
+                  </svg>
+                  <span>@github</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
