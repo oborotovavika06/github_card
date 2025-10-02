@@ -46,16 +46,22 @@
         <img
           src="./assets/ProfilePicture.svg"
           alt="Profile picture"
-          class="user-card__photo"
+          class="user-card__photo user-card__photo-shown"
         />
 
         <div class="user-card__content-wrapper">
           <div class="user-card__header">
+            <img
+              src="./assets/ProfilePicture.svg"
+              alt="Profile picture"
+              class="user-card__photo user-card__photo-adaptive"
+            />
             <div class="user-card__profile-info">
               <h1 class="user-card__name">The Octocat</h1>
               <a href="" class="user-card__link">@octocat</a>
+              <p class="user-card__date user-card__date-adaptive">Joined 25 Jan 2011</p>
             </div>
-            <p class="user-card__date">Joined 25 Jan 2011</p>
+            <p class="user-card__date user-card__date-shown">Joined 25 Jan 2011</p>
           </div>
 
           <div class="user-card__bio">

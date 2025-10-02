@@ -286,7 +286,35 @@ a:hover {
   object-fit: cover;
   flex-shrink: 0;
 }
+@media (min-width: 488px) {
 
+  .user-card__photo-adaptive {
+    display: none;
+  }
+  .user-card__photo-shown {
+    display: block;
+  }
+  .user-card__date-adaptive {
+    display: none;
+  }
+  .user-card__date-shown  {
+    display: block;
+  }
+}
+@media (max-width: 488px) {
+  .user-card__photo-shown {
+    display: none;
+  }
+  .user-card__photo-adaptive {
+    display: block;
+  }
+  .user-card__date-adaptive {
+    display: block;
+  }
+  .user-card__date-shown {
+    display: none;
+  }
+}
 @media (max-width: 488px) {
   .user-card__photo {
     width: 70px;
